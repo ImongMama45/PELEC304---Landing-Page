@@ -1,7 +1,45 @@
-<ul>
-    <li>
-        hi
-    </li>
-</ul>
-   
+{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'Landing/css/footer.css' %}">
+</head>
+<footer class="footer_container">
+    <div class="footer_content">
+        <!-- Left Navigation Column -->
+        <div class="footer_column">
+            <ul class="footer_nav">
+                <li><a href="#" class="footer_link">Get Help</a></li>
+                <li><a href="#" class="footer_link">Gumbaroni</a></li>
+                <li><a href="#" class="footer_link">Jorvick Gumboots</a></li>
+                <li><a href="#" class="footer_link">Shop</a></li>
+                <li><a href="#" class="footer_link">Favorite</a></li>
+                <li><a href="#" class="footer_link">Basket</a></li>
+            </ul>
+        </div>
+        
+        <!-- Center Logo Column -->
+        <div class="footer_column center">
+            <div class="footer_logo">
+                <div class="logo_icon">             
+                    <img src="static\Landing\img\logo.png" alt="">                 
+                </div>
+            </div>
+        </div>
+        
+            <div class="footer_column">
+            <ul class="footer_nav right_nav">
+                <li><a href="#" class="footer_link">Home</a></li>
+                <li><a href="#" class="footer_link">About</a></li>
+                <li><a href="#" class="footer_link">New Shoes</a></li>
+                <li><a href="#" class="footer_link">Shop</a></li>
+                <li><a href="#" class="footer_link">Favorite</a></li>
+                <li><a href="#" class="footer_link">Basket</a></li>
+            </ul>
+        </div>
+    </div>
     
+    <div class="footer_bottom">
+        <p class="copyright">© 2025 Foot Wear Hub, Inc. All rights reserved</p>
+    </div>
+</footer>
+{% endblock %}
