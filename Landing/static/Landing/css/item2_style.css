@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.adobo_container {
+    min-height: 100vh;
+    background: #DADAD9;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    overflow: hidden;
+}
+
+.adobo_showcase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Left Square Section */
+.product_square {
+    width: 450px;
+    height: 450px;
+    background: #c44532;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 60px rgba(196, 69, 50, 0.3);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Top Header Section */
+.square_header {
+    padding: 25px 30px 15px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.shop_logo {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.product_title {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+/* Main Shoe Display Area */
+.shoe_display {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    position: relative;
+}
+
+.shoe_image {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.3));
+    transition: transform 0.4s ease;
+}
+
+.shoe_display:hover .shoe_image {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+.no_image_placeholder {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* Bottom Footer Section */
+.square_footer {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 25px 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.product_name {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.product_description {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+}
+
+/* Right Geometric Section */
+.geometric_section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+}
+
+.circle_container {
+    width: 450px;
+    height: 450px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle_bg {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff6b47 0%, #e85a3f 50%, #d14832 100%);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 25px 70px rgba(255, 107, 71, 0.4);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+}
+
+.geometric_shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 20px;
+}
+
+.shape_1 {
+    width: 90px;
+    height: 130px;
+    background: linear-gradient(135deg, #2d2d2d 0%, #000 100%);
+    top: 18%;
+    left: 12%;
+    transform: rotate(-15deg);
+    animation: float1 6s ease-in-out infinite;
+}
+
+.shape_2 {
+    width: 110px;
+    height: 70px;
+    background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+    top: 55%;
+    right: 15%;
+    transform: rotate(25deg);
+    animation: float2 8s ease-in-out infinite;
+}
+
+.shape_3 {
+    width: 70px;
+    height: 100px;
+    background: linear-gradient(135deg, #ff6b47 0%, #d14832 100%);
+    bottom: 12%;
+    left: 20%;
+    transform: rotate(-30deg);
+    animation: float3 7s ease-in-out infinite;
+}
+
+@keyframes float1 {
+    0%, 100% { transform: rotate(-15deg) translateY(0px); }
+    50% { transform: rotate(-10deg) translateY(-12px); }
+}
+
+@keyframes float2 {
+    0%, 100% { transform: rotate(25deg) translateY(0px); }
+    50% { transform: rotate(30deg) translateY(18px); }
+}
+
+@keyframes float3 {
+    0%, 100% { transform: rotate(-30deg) translateY(0px); }
+    50% { transform: rotate(-25deg) translateY(-10px); }
+}
+
+.floating_shoe {
+    width: 320px;
+    height: auto;
+    object-fit: contain;
+    position: relative;
+    filter: drop-shadow(0 20px 45px rgba(0, 0, 0, 0.35));
+    animation: floatShoe 5s ease-in-out infinite;
+    transform: rotate(-15deg);
+}
+
+@keyframes floatShoe {
+    0%, 100% { transform: rotate(-15deg) translateY(0px); }
+    50% { transform: rotate(-10deg) translateY(-20px); }
+}
+
+.price_tag {
+    position: absolute;
+    bottom: -25px;
+    right: 40px;
+    background: linear-gradient(135deg, #2d2d2d 0%, #000 100%);
+    color: #fff;
+    padding: 18px 30px;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 1.5rem;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.currency {
+    font-size: 1.1rem;
+    margin-right: 3px;
+}
+
+.price {
+    font-size: 1.5rem;
+}
+
+/* Focus states */
+.product_square:focus-within {
+    outline: 3px solid #ff6b47;
+    outline-offset: 5px;
+}
+
+.geometric_section:focus-within {
+    outline: 3px solid #ff6b47;
+    outline-offset: 5px;
+    border-radius: 50%;
+}
